@@ -9,19 +9,48 @@
     </head>
     <body>
         <div class="parentContainer">
-        <div class="title">Blog1</div>
-        <div class="subtitle">Subtitle / Desc</div>
+        <div class="title">Node is not in sync!</div>
+        <div class="subtitle">Node.JS is an asynchronous language that works different!</div>
         <div class="text">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae aliquam magnam quos autem 
-            tempore, possimus sed sequi nulla iste unde dolore. Voluptatum, vitae totam nostrum vel nulla 
-            quidem beatae non dolorem temporibus facere animi nisi eligendi assumenda. Aliquam alias atque 
-            cupiditate ex consequatur aut, iste aspernatur velit deserunt perferendis repellat dolorem blanditiis 
-            omnis delectus fuga magni ipsa odit similique totam explicabo expedita ab commodi dolores. Totam cum, 
-            earum, laudantium saepe reiciendis recusandae, ullam consectetur aut odit eius delectus! Soluta beatae 
-            magni odio, tenetur cupiditate accusamus illo sed facilis fugit maxime. Culpa aperiam, doloribus 
-            nemo modi deleniti quae excepturi nostrum perspiciatis.
+            We all have used Node in our daily lives or at least heard of it at least 
+            once in the coding world. But do you actually know what Node is?
+            Node.JS is a simulated environment that acts like a browser. Simply put, whatever the 
+            browser does, the same thing can be done in Node. So you need not open your browser for 
+            console logs or responses from servers anymore. But why use Node when the browser already exists?
+            Here's why..
             <br><br>
-            You can read more on this here:<a href="">Sample link</a>
+            Node by default works in a synchronous manner using a single thread. That means like JS, Python,
+            Java and so on it takes a command or a piece of code, processess it and then goes to the next line.
+            Meaning it can handle only one task(piece of code) at a time. We are also used to this as we write
+            our code from top to bottom as that is the order of execution followed. <br>
+            But Node has an option to be asynchronous. So when we use this option, it starts executing a code 
+            and as soon as the execution has started, it will go on to the next piece of code without waiting for
+            the result of that piece of code that is being processed. This is nothing but <b>multi tasking</b>.
+            So when it taks more time to process the code we can parellelly execute a different piece of code 
+            thus resulting in reducing the time taken to execute the code.
+            <br>
+            However, use async feature only when you do not have a dependency on the previous lines and when
+            you are ok to get the output in a jumbled order,as we don't know which task will be finsihed
+            first while multitasking.
+            <br><br>
+            <pre>
+            Syntax:
+            async function myFunction() {
+                return "Hello";
+              }
+              myFunction().then(
+                function(value) {myDisplayer(value);},
+                function(error) {myDisplayer(error);}
+              );
+            </pre>
+            Here as you can see as myFunction is an async function, so whatever is called inisde it will
+            execute parellelly and whichever execution is finished first it will be displayed first (assuming
+            the display was a part of the code being executed).
+            <br><br>
+            Hope you learnt something from this and you can give it a shot in the Mark13 assignment 
+            where we need to have the DSA for different formats of date.
+            <br><br><br>
+            <div style="text-align:center ;"><b>Have a great day!</b></div>
         </div>
         </div>
     </body>
